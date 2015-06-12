@@ -1,4 +1,4 @@
-DOCKER_IMAGE_VERSION=0.1.0
+DOCKER_IMAGE_VERSION=0.1.1
 DOCKER_IMAGE_NAME=hypriot/rpi-busybox-httpd
 DOCKER_IMAGE_TAGNAME=$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION)
 
@@ -11,6 +11,8 @@ build:
 		--entry '/bin/busybox' \
 		--cmd 'httpd -f -p 80 -h /www' \
 		/bin/busybox
+	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME):latest
+	docker build -t hypriot/rpi-busybox-httpd .
 	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME):latest
 	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_TAGNAME)
 
