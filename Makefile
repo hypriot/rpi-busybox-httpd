@@ -4,7 +4,7 @@ SHA := $(shell git rev-parse --short HEAD)
 timestamp := $(shell date +"%Y%m%d%H%M")
 #VERSION :=$(shell cat VERSION)        	
 
-default: build test push
+default: build push
 
 docker: loadS3_and_extract dockerbuild push
 
