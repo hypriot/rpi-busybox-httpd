@@ -1,2 +1,2 @@
-FROM hypriot/rpi-busybox-httpd
+FROM temp
 EXPOSE 80
