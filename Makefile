@@ -15,7 +15,7 @@ dockerbuild:
 	docker build -t $(NAMESPACE)/$(IMAGENAME) .
 
 build:
-	./install_deps.sh
+	./install-deps.sh
 	dockerize -t temp \
 		--add-file index.html /www/ \
 		--add-file pi_armed_with_docker.jpg /www/ \
