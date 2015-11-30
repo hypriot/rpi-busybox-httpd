@@ -1,26 +1,13 @@
 clone:
   path: github.com/hypriot/rpi-busybox-httpd
 
-build:
-  image: firecyberice/rpi-docker:1.10.0-dev
-  extra_hosts:
-    - docker
-  environment:
-    - DOCKER_HOST="tcp://docker:2375"
-  commands:
-    - make
-
-compose:
-  docker:
-    privileged: true
-    image: firecyberice/rpi-docker:1.10.0-dev-dind
-
 publish:
   docker:
     username: $$DOCKER_USER
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
     repo: hypriot/rpi-busybox-httpd
+    file: Dockerfile
     tag: "0.4"
     when:
       branch: drone-0.4.0-rewrite
