@@ -1,13 +1,13 @@
-clone:
+#clone:
 #  path: github.com/hypriot/rpi-busybox-httpd
-
-#publish:
-#  docker:
-#    username: $$DOCKER_USER
-#    password: $$DOCKER_PASS
-#    email: $$DOCKER_EMAIL
-#    repo: hypriot/rpi-busybox-httpd
-#    file: Dockerfile
-#    tag: "0.4"
-#    environment:
-#      - DOCKER_LAUNCH_DEBUG=true
+#
+publish:
+  docker:
+    username: $$DOCKER_USER
+    password: $$DOCKER_PASS
+    email: $$DOCKER_EMAIL
+    repo: hypriot/rpi-busybox-httpd
+    file: Dockerfile
+    tag: "0.4"
+    environment:
+      - DOCKER_LAUNCH_DEBUG=true
