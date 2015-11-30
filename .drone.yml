@@ -1,5 +1,5 @@
 clone:
-  path: github.com/hypriot/rpi-busybox-httpd
+#  path: github.com/hypriot/rpi-busybox-httpd
 
 #publish:
 #  docker:
