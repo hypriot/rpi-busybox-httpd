@@ -3,7 +3,7 @@ clone:
 
 build:
   image: firecyberice/rpi-docker:1.10.0-dev
-  links:
+  extra_hosts:
     - docker
   environment:
     - DOCKER_HOST="tcp://docker:2375"
@@ -23,5 +23,13 @@ publish:
     repo: hypriot/rpi-busybox-httpd
     tag: "0.4"
     when:
-      repo: hypriot/rpi-busybox-httpd
       branch: drone-0.4.0-rewrite
+
+#notify:
+#  slack:
+#    webhook_url: 
+#    channel: dev
+#    username: drone
+#    when:
+#      success: false
+#      failure: true
