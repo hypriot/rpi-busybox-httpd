@@ -1,8 +1,5 @@
 debug: true
 
-clone:
-  path: github.com/hypriot/rpi-busybox-httpd
-
 publish:
   docker:
     username: $$DOCKER_USER
@@ -11,5 +8,3 @@ publish:
     repo: hypriot/rpi-busybox-httpd
     file: Dockerfile
     tag: "0.4"
-    environment:
-      - DOCKER_LAUNCH_DEBUG=true
