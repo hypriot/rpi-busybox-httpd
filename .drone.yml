@@ -9,14 +9,4 @@ publish:
     repo: hypriot/rpi-busybox-httpd
     file: Dockerfile
     tag: "0.4"
-    when:
-      branch: drone-0.4.0-rewrite
 
-#notify:
-#  slack:
-#    webhook_url: 
-#    channel: dev
-#    username: drone
-#    when:
-#      success: false
-#      failure: true
