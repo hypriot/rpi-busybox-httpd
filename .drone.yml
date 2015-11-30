@@ -9,4 +9,5 @@ publish:
     repo: hypriot/rpi-busybox-httpd
     file: Dockerfile
     tag: "0.4"
-
+    environment:
+      - DOCKER_LAUNCH_DEBUG=true
