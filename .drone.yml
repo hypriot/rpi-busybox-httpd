@@ -1,17 +1,3 @@
-build:
-  image: firecyberice/rpi-docker:1.10.0-dev
-  extra_hosts:
-    - docker
-  environment:
-    - DOCKER_HOST=tcp://localhost:2375
-  commands:
-    - docker build -t hypriot/rpi-busybox-httpd .
-
-compose:
-  docker:
-    privileged: true
-    image: firecyberice/rpi-docker:1.10.0-dev-dind
-
 publish:
   docker:
     environment:
