@@ -1,7 +1,16 @@
-debug: true
+build:
+  image: firecyberice/rpi-docker:1.10.0-dev
+  extra_hosts:
+    - docker
+  environment:
+    - DOCKER_HOST=tcp://localhost:2375
+  commands:
+    - docker build -t hypriot/rpi-busybox-httpd .
 
-clone:
-    path: hypriot/rpi-busybox-httpd
+compose:
+  docker:
+    privileged: true
+    image: firecyberice/rpi-docker:1.10.0-dev-dind
 
 publish:
   docker:
@@ -10,3 +19,11 @@ publish:
     email: $$DOCKER_EMAIL
     repo: hypriot/rpi-busybox-httpd
     tag: "0.4"
+notify:
+  slack:
+    webhook_url: $$SLACK_WEBHOOK_URL
+    when:
+      started: false
+      success: true
+      failure: true
+
