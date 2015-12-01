@@ -1,8 +1,7 @@
 debug: true
 
 clone:
-  recursive: false
-  depth: 2
+    path: hypriot/rpi-busybox-httpd
 
 publish:
   docker:
@@ -10,5 +9,4 @@ publish:
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
     repo: hypriot/rpi-busybox-httpd
-    file: Dockerfile
     tag: "0.4"
