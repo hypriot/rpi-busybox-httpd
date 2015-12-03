@@ -9,6 +9,7 @@ publish:
     email: $$DOCKER_EMAIL
     repo: hypriot/rpi-busybox-httpd
     tag: "0.4"
+    file: /drone/src/github.com/hypriot/rpi-busybox-httpd/Dockerfile
 
 notify:
   slack:
