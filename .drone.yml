@@ -10,12 +10,12 @@ publish:
     repo: hypriot/rpi-busybox-httpd
     tag: "0.4"
 
-notify:
-  slack:
-    webhook_url: $$SLACK_WEBHOOK_URL
-    channel: buildstatus
-    username: Drone
-    when:
-      started: false
-      success: true
-      failure: true
+#notify:
+#  slack:
+#    webhook_url: $$SLACK_WEBHOOK_URL
+#    channel: buildstatus
+#    username: Drone
+#    when:
+#      started: false
+#      success: true
+#      failure: true
