@@ -1,4 +1,5 @@
 debug: true
+
 publish:
   docker:
     environment:
@@ -8,7 +9,6 @@ publish:
     email: $$DOCKER_EMAIL
     repo: hypriot/rpi-busybox-httpd
     tag: "0.4"
-    file: Dockerfile
 
 notify:
   slack:
