@@ -11,10 +11,10 @@ build:
 		--entry '/bin/busybox' \
 		--cmd 'httpd -f -p 80 -h /www' \
 		/bin/busybox
-	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME):latest
+	docker tag $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME):latest
 	docker build -t hypriot/rpi-busybox-httpd .
-	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME):latest
-	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_TAGNAME)
+	docker tag $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME):latest
+	docker tag $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_TAGNAME)
 
 push:
 	docker push $(DOCKER_IMAGE_NAME)
